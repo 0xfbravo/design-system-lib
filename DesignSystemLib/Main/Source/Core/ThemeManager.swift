@@ -11,6 +11,19 @@ import DSIcons
 /// This class is responsible for manage the application theme
 public struct ThemeManager {
     
+    // MARK: Public variables
+    public static var colors: DSColorsProtocol = DefaultColorsTheme()
+    
+    // MARK: Methods
+    public static func set(_ type: ThemeType) {
+        switch type {
+        case .`default`:
+            colors = DefaultColorsTheme()
+        case .premium:
+            colors = PremiumColorsTheme()
+        }
+    }
+    
 }
 
 public enum ThemeType {
