@@ -13,14 +13,17 @@ public struct ThemeManager {
     
     // MARK: Public variables
     public static var colors: DSColorsProtocol = DefaultColorsTheme()
+    public static var icons: DSIconsProtocol = DefaultIconsTheme()
     
     // MARK: Methods
     public static func set(_ type: ThemeType) {
         switch type {
         case .`default`:
             colors = DefaultColorsTheme()
+            icons = DefaultIconsTheme()
         case .premium:
             colors = PremiumColorsTheme()
+            icons = PremiumIconsTheme()
         }
     }
     
